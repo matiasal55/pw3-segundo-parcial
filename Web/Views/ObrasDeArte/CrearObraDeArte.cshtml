@@ -1,0 +1,19 @@
+﻿@model BD.Modelos.ObraDeArte;
+
+@{
+    ViewBag.Title = "Crear Obra de Arte";
+    Layout = "_Layout";
+}
+
+<h2>Crear Obra de Arte</h2>
+<form asp-controller="ObrasDeArte" asp-action="CrearObraDeArte" method="POST">
+    <div class="form-group">
+        <label asp-for="Nombre">Nombre de la obra:</label>
+        <input asp-for="Nombre" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="AnioCreacion">Año de Creación:</label>
+        <input asp-for="AnioCreacion" type="number" class="form-control"/>
+    </div>
+    <button class="btn btn-success" type="submit">Grabar Nueva Obra de Arte</button>
+</form>

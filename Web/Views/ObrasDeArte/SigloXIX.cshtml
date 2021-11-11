@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Obras del Siglo XIX";
+    Layout = "_Layout";
+}
+
+<h2>Obras del Siglo XIX</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Nombre obra de arte</th>
+        <th>Año creación</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var obra in ViewBag.Obras)
+        {
+            <tr>
+                <td>@obra.Nombre</td>
+                <td>@obra.AnioCreacion</td>
+            </tr>
+        }
+    </tbody>
+</table>
